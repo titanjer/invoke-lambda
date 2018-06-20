@@ -19,9 +19,10 @@ Parameters:
 #       Type: Canary10Percent5Minutes
 
 Resources:
-  HelloWorld:
+  InvokeLambda:
     Type: AWS::Serverless::Function
     Properties:
+      FunctionName: invoke-lambda
       Handler: index.handler
       Runtime: python3.6
       Role:
