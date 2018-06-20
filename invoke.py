@@ -9,7 +9,7 @@ import boto3
 
 if __name__ == '__main__':
     client = boto3.client('lambda')
-    name = 'awscodestar-invoke-lambda-lambda-HelloWorld-5WPI2EY6ZR6A'
+    name = 'invoke-lambda'
     response = client.invoke(
         FunctionName=name,
         InvocationType='RequestResponse',
