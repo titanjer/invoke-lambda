@@ -1,6 +1,8 @@
 import json
 import datetime
 
+import sklearn.cluster
+
 
 def handler(event, context):
     data = {

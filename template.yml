@@ -24,6 +24,7 @@ Resources:
     Properties:
       FunctionName: invoke-lambda
       Handler: index.handler
+      CodeUri: src
       Runtime: python3.6
       Role:
         Fn::ImportValue:
