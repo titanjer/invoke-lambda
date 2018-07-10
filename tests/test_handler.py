@@ -1,5 +1,5 @@
 import unittest
-import index
+from src import index
 
 
 class TestHandlerCase(unittest.TestCase):
