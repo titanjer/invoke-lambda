@@ -3,7 +3,7 @@ version: 0.2
 phases:
   install:
     commands:
-      - pip install --upgrade pip awscli boto3==1.7.30
+      - pip install --upgrade pip awscli
       - pip install -r requirements.txt -t ./src
 
   pre_build:
