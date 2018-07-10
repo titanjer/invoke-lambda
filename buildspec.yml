@@ -4,11 +4,11 @@ phases:
   install:
     commands:
       - pip install --upgrade awscli
-      - pip install -r src/equirements.txt -t ./src
+      - pip install -r requirements.txt -t ./src
 
   pre_build:
     commands:
-      - python -m unittest discover src/tests
+      - python -m unittest discover tests
   
   build:
     commands:
