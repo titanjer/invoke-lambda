@@ -25,7 +25,7 @@ Resources:
       FunctionName: invoke-lambda
       Handler: index.handler
       CodeUri: ./src
-      Runtime: python3.6
+      Runtime: python2.7
       Role:
         Fn::ImportValue:
           !Join ['-', [!Ref 'ProjectId', !Ref 'AWS::Region', 'LambdaTrustRole']]
