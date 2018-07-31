@@ -7,9 +7,9 @@ phases:
       - pip install -r requirements.txt -t ./src
       - unzip output.zip -d ./src
 
-  pre_build:
-    commands:
-      - PYTHONPATH=$PYTHONPATH:./src python3.6 -m unittest discover tests
+  # pre_build:
+  #   commands:
+  #     - PYTHONPATH=$PYTHONPATH:./src python3.6 -m unittest discover tests
   
   build:
     commands:
