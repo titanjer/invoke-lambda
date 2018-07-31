@@ -1,4 +1,7 @@
-boto3==1.7.54
-numpy==1.14.5
-scikit-learn==0.19.1
-scipy==1.1.0
+# # aws lambda included
+# boto3==1.7.54
+
+# # provide by titanjer/aws-lambda-python36-sklearn:2017.03.1.20170812
+# numpy==1.15.0
+# scipy==1.1.0
+# scikit-learn==0.19.2
