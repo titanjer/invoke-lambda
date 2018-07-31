@@ -1,16 +1,26 @@
 # -*- coding: UTF-8 -*-
 
+import os
+import ctypes
+
+for d, _, files in os.walk('lib'):
+    for f in files:
+        if f.endswith('.a'):
+            continue
+        ctypes.cdll.LoadLibrary(os.path.join(d, f))
+
 import json
 import datetime
 
+import sklearn
 import sklearn.cluster
-import boto3
 
 
 def handler(event, context):
     data = {
         'output': 'Hello World',
-        'timestamp': datetime.datetime.utcnow().isoformat()
+        'timestamp': datetime.datetime.utcnow().isoformat(),
+        'sklearn': sklearn.__version__,
     }
     return {'statusCode': 200,
             'body': json.dumps(data),
