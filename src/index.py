@@ -21,6 +21,7 @@ def handler(event, context):
         'output': 'Hello World',
         'timestamp': datetime.datetime.utcnow().isoformat(),
         'sklearn': sklearn.__version__,
+        'event': event,
     }
     return {'statusCode': 200,
             'body': json.dumps(data),
