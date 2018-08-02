@@ -9,7 +9,6 @@ for d, _, files in os.walk('lib'):
             continue
         ctypes.cdll.LoadLibrary(os.path.join(d, f))
 
-import json
 import datetime
 
 import sklearn
@@ -24,5 +23,5 @@ def handler(event, context):
         'event': event,
     }
     return {'statusCode': 200,
-            'body': json.dumps(data),
+            'body': data,
             'headers': {'Content-Type': 'application/json'}}
